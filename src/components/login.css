@@ -1,0 +1,8 @@
+.login{
+    background: linear-gradient(90deg,#0593c1,rgb(1 146 146));
+    height: 100vh;
+}
+.login a{
+    text-decoration: underline;
+    color: #1a1a84;
+}

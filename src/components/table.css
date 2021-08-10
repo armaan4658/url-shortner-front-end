@@ -1,0 +1,11 @@
+.table{
+    background:  #e6e6e6;
+}
+.center{
+    display: grid;
+    place-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

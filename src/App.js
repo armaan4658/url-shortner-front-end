@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Switch,Route} from "react-router-dom";
+import {LoginComponent} from './components/loginComponent.js';
+import {HomeComponent} from './components/homeComponent.js';
+import {SignUp} from './components/signUpComponent.js';
+import {ForgotPassword} from './components/forgotPasswordComponent.js';
+import {OtpVerification} from './components/otpVerificationComponent.js';
+import {PasswordReset} from './components/passwordResetComponent.js';
+import React from 'react';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <Switch>
+            <Route exact path='/'>
+                <LoginComponent />
+            </Route>
+            <Route path='/signup'>
+                <SignUp />
+            </Route>
+            <Route path='/forgotpassword'>
+                <ForgotPassword />
+            </Route>
+            <Route path='/home'>
+                <HomeComponent />
+            </Route>
+            <Route path='/verifyaccount/:_id'>
+              <OtpVerification />
+            </Route>
+            <Route path='/passwordreset/:_id'>
+              <PasswordReset />
+            </Route>
+          </Switch>
     </div>
   );
 }
