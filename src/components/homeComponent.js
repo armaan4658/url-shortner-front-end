@@ -39,17 +39,7 @@ export const HomeComponent = () => {
                     <SetTableDataContext.Provider value={setTableData}>
                         <GetTableDataContext.Provider value={getTableData}>
                             <Route exact path={path}>
-                                {tableData?(
-                                    tableData.length>0?(
-                                        <StickyHeadTable/>
-                                    ):(
-                                        <p>No data to display</p>
-                                    )
-                                    
-                                ):(
-                                    <p></p>
-                                )}
-                                
+                                <StickyHeadTable />
                             </Route>
                             <Route path={`${path}/addurl`}>
                                 <AddUrl />
