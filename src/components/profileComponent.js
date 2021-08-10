@@ -11,7 +11,6 @@ export const Profile = () => {
         .then(res=>{
             if(res.data){
                 setData(res.data);
-                console.log("data",data);
             }
         })
         .catch(res=>console.log(res))
