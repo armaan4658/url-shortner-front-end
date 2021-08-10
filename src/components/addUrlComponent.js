@@ -32,7 +32,7 @@ export const AddUrl = () => {
             "userId":localStorage.getItem("_id"),
             "url":data.url
         }
-        axios.post('https://url-shortner-back-end-ak.herokuapp.com//url/add',body,{withCredentials:true})
+        axios.post('https://url-shortner-back-end-ak.herokuapp.com/url/add',body,{withCredentials:true})
         .then(res=>{
             setLoading("none");
             if(res.data.message==="green"){
