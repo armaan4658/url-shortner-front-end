@@ -28,7 +28,10 @@ export const LoginComponent = () => {
 
     const onSubmit = (data) => {
         setLoading("block")
+        // for netlify
         axios.post('https://url-shortner-back-end-ak.herokuapp.com/user/login',data,{withCredentials:true})
+        // for localhost
+        // axios.post('http://localhost:5000/user/login',data,{withCredentials:true})
         .then(res=>{
             setLoading("none")
             if(res.data.message!=="green"){

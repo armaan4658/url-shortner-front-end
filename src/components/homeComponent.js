@@ -17,8 +17,12 @@ export const HomeComponent = () => {
     const {path} = useRouteMatch();
 
     const getTableData = () => {
+        // for netlify
         axios.get(`https://url-shortner-back-end-ak.herokuapp.com/url/get/${localStorage.getItem("_id")}`,{withCredentials:true})
+        // for localhost
+        // axios.get(`http://localhost:5000/url/get/${localStorage.getItem("_id")}`,{withCredentials:true})
         .then(res=>{
+            console.log(res);
             if(res.data){
                 setTableData(res.data)
             }
